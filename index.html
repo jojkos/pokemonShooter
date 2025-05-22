@@ -103,6 +103,25 @@
             50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.7; }
             100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0; }
         }
+        #buy-me-a-coffee-link {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 35; /* Nad ostatními prvky, ale pod případnými modálními okny */
+            background-color: #FFDD00; /* Barva Buy Me a Coffee */
+            color: #000000;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        #buy-me-a-coffee-link:hover {
+            transform: scale(1.05);
+            background-color: #FFE64D;
+        }
     </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen m-0">
@@ -132,6 +151,10 @@
                 Hrát Znovu
             </button>
         </div>
+
+        <a href="https://buymeacoffee.com/jojkos" target="_blank" id="buy-me-a-coffee-link">
+            Kup mi kafe ☕
+        </a>
     </div>
 
     <script>
